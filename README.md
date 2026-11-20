@@ -1,25 +1,27 @@
-# Alridha Alqattan - Assignment 2
+# Alridha Alqattan - Assignment 3
 
 # Personal Portfolio Website
 
 ## Project Description
 
-This project is a personal portfolio website developed using mutliple coding languages. It presents my background, projects, and contact information in a simple and organized layout.
+This project is an upgraded version of my personal portfolio website, developed using React, JavaScript, HTML, and CSS. It presents my background, projects, and contact information in a simple and organized layout.
 
-The website includes a navigation bar, an About section, a Projects section, and a Contact section. It also includes a component that displays the current date and time. Additionally, it fetches an API to display programming jokes.
+The website includes a navigation bar, an About section, a Projects section, and a Contact section. It also includes components that display the current date and time, programming jokes fetched from an external API, and my GitHub repositories.
 
-Initially in assignment 1, only HTML,CSS, and JS were used. However,
-React and jsx is also used in the upgraded version in assignment 2
+Compared to Assignment 2, this version introduces additional functionality, including integration with the GitHub API, more advanced data handling, interactive elements, and performance improvements.
 
 ## Features
 
 - **Navigation:** Links to the main sections of the website.
 - **About:** Introduces me and provides information about my background.
 - **Projects:** Displays selected projects and relevant details.
-- **Contact:** Provides a form for visitors to enter their contact information and message.
-- **Programming Joke:** Displays a programming joke fetched from an API.
+- **Contact:** Provides a form for visitors to enter their contact information and message, with input validation.
+- **Programming Joke:** Displays programming jokes fetched from an external API.
+- **GitHub Repositories:** Fetches and displays my public GitHub repositories using the GitHub REST API, including their names, main programming languages, creation dates, and links.
 - **Live Date and Time:** Displays the current date and time using a separate React component.
+- **Interactive Sections:** Allows visitors to interact with website elements and show or hide content.
 - **Responsive Design:** Designed to provide a usable experience across different screen sizes.
+- **Loading and Error Handling:** Displays loading messages while retrieving API data and error messages if a request fails.
 
 ## Technologies Used
 
@@ -27,6 +29,9 @@ React and jsx is also used in the upgraded version in assignment 2
 - JavaScript
 - HTML
 - CSS
+- GitHub REST API
+- Official Joke API
+- Vite
 
 ## Setup Instructions
 
@@ -38,27 +43,19 @@ Install Node.js and npm before running the project.
 
 1. Clone the repository:
 
-   
-   git clone YOUR_REPOSITORY_URL
-  
+   `git clone YOUR_REPOSITORY_URL`
 
 2. Navigate to the project directory:
 
-
-   cd YOUR_PROJECT_DIRECTORY
-
+   `cd YOUR_PROJECT_DIRECTORY`
 
 3. Install the dependencies:
 
-
-   npm install
-  
+   `npm install`
 
 4. Start the development server:
 
-  
-   npm run dev
-  
+   `npm run dev`
 
 5. Open the local URL displayed in the terminal in your browser.
 
@@ -66,60 +63,87 @@ Install Node.js and npm before running the project.
 
 ```text
 project/
-├── assets/
-│   ├── file-system.jpg
-│   ├── journey_to_success.jpg
-│   ├── kfupm-logo-300x284.webp
-│   └── webdev.jpg
 ├── docs/
-│   ├── Academic-Integrity-Report.md
 │   ├── ai-usage-report.md
-│   └── Technical-Documentation.md
-├── node_modules/
+│   └── technical-documentation.md
 ├── src/
 │   ├── assets/
-│   │   ├── file-system.jpg
-│   │   ├── journey_to_success.jpg
+│   │   ├── file-system.webp
 │   │   ├── kfupm-logo-300x284.webp
-│   │   └── webdev.jpg
+│   │   └── webdev.webp
 │   ├── components/
 │   │   ├── Contact.jsx
 │   │   ├── JokeBox.jsx
+│   │   ├── ReposBox.jsx
+│   │   ├── Box.jsx
+│   │   ├── Box.css
 │   │   └── TimeDate.jsx
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
 ├── .gitignore
-├── .oxlintrc.json
 ├── index.html
-├── package-lock.json
 ├── package.json
+├── package-lock.json
 ├── README.md
 └── vite.config.js
 ```
 
-The project structure above is illustrative. Some Files are not shown for 
-Simplicity.
+The project structure above is illustrative. Some files are not shown for simplicity.
+
+## API Integration
+
+The website uses external APIs to retrieve and display dynamic information.
+
+- **GitHub REST API:** Retrieves my public GitHub repositories and displays information about them, including their names, programming languages, creation dates, and repository links.
+- **Official Joke API:** Retrieves programming jokes and displays them on the website.
+
+Both API integrations include loading and error messages to provide feedback to visitors when requests are being processed or fail.
+
+## Performance
+
+Performance improvements are applied to make the website load faster and run more efficiently.
+
+These include:
+- Compressing and resizing images to reduce their file sizes.
+- Removing unused code, imports, and files.
+- Reusing CSS classes and React components to avoid unnecessary repetition.
+
+The website is also tested using Google Chrome Lighthouse to evaluate its performance.
+
 ## AI Usage
 
-AI tools were used as development assistance for understanding React concepts, troubleshooting code, and improving the project documentation. AI-generated suggestions were reviewed and adapted as needed.
+AI tools were used as development assistance for understanding React concepts, troubleshooting code, implementing features, and improving project documentation. AI-generated suggestions were reviewed, modified, and tested as needed.
 
-## Assignment 2 Requirements Met
+Detailed information about AI usage, including the tools used, their purposes, and modifications made, is provided in `docs/ai-usage-report.md`.
 
-### Dynamic Content
-- Time and Date is implemented
-- Navigation between different sections is implemented
+## Assignment 3 Requirements Met
 
-### Data Handling
-- Data is fetched from an API and displayed in the programming joke section
-- The contact form validates data and shows confirmation message or error message
+### API Integration
+- GitHub repositories are retrieved and displayed using the GitHub REST API.
+- Programming jokes are retrieved from an external API.
+- Loading and error messages are implemented for API requests.
 
-###  Animation and Transitions
-- Hover effects on buttons and Boxes
+### Complex Logic
+- Contact form validation checks user inputs before submission.
+- API responses are handled and displayed dynamically.
+- Repository information is processed and displayed.
 
-### Error Handling and User Feedback
-- Error messages for invalid or empty form inputs
-- A message when an API fetching fails
-- Loading message when fetching data from API
-- No data found message when no data is found from the API
+### State Management
+- React state is used to manage dynamic content.
+- Loading and error states are managed when retrieving API data.
+- Interactive website elements respond to user actions.
+- Boxes are hideable or showable by clicking on the title of each section
+
+### Performance
+- Images are compressed and resized to reduce loading times.
+- Unused code and files are removed.
+- CSS and React components are organized to reduce repetition.
+- Performance is evaluated using Lighthouse.
+
+### Code Quality
+- Components are organized into separate files.
+- Code is properly structured and indented.
+- Unnecessary code is removed.
+
