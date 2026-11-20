@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react'
 
-
-
-
-
+// A component to fetch and display my github repositories. User can sort the repositories by newest or oldest.
 export default function ReposBox() {
 
     const [repos, setRepos] = useState([]);
@@ -33,12 +30,14 @@ export default function ReposBox() {
             });
     }, [])
 
+    // Sort the repositories based on the selected sort option (newest or oldest)
     const sortedRepos = [...repos].sort((a, b) => (
         sort === "new" ? new Date(b.created_at) - new Date(a.created_at) : new Date(a.created_at) - new Date(b.created_at)
     ))
 
     return (<>
 
+        {/* A dropdown to allow the user to sort the repositories */}
         <label htmlFor="sort">Sort by:</label>
         <select style={{ marginLeft: '10px', border: '1px solid #ccc', width: '100px', alignSelf: "center" }} id="sort" value={sort} onChange={e => setSort(e.target.value)}>
             <option value="new">Newest</option>
@@ -47,13 +46,13 @@ export default function ReposBox() {
 
         {loading && <p>Loading my repositories...</p>}
         {error && <p>Error: {error}</p>}
-        {sortedRepos.map(repo => (<>
+        {sortedRepos.map(repo => (<div key={repo.id}>
             <p style={{ fontWeight: 'bold' }}>Title: {repo.name}</p>
             <p style={{ fontStyle: 'italic' }}>Main language: {repo.language}</p>
             <p style={{ color: 'green' }}>Created at: {repo.created_at}</p>
             <a href={repo.html_url} target="_blank">View repository</a>
 
-        </>))}
+        </div>))}
 
     </>);
 }

@@ -5,6 +5,8 @@ import Contact from './components/Contact.jsx'
 import JokeBox from './components/JokeBox.jsx'
 import ReposBox from './components/ReposBox.jsx'
 import Box from './components/Box.jsx'
+// Importing important components and assets and style for the application
+
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
 
       <div id="wrap">
 
+        {/* A element to display time and date */}
         <TimeDate />
 
         <div id="greet">
@@ -23,6 +26,7 @@ function App() {
           <h3>Welcome to my personal website!</h3>
         </div>
 
+        {/* Navigation sections to the rest of the website */}
         <section id="navigation">
           <Box title="Navigation" content={
             <ul className="box">
@@ -65,11 +69,11 @@ function App() {
                 problem is related to electricity, water, or any other issue.
               </p>
               <a href="assets/webdev.jpg" target="_blank"><img src="assets/webdev.webp" alt="Web Development"
-                class="projImg" /></a>
+                className="projImg" /></a>
             </div>
           </>} /></section>
 
-
+        {/* A section to display my repositories */}
         <section id="repos">
           <Box title="My github repositories" content={
             <div id="repoBox" className="box">
