@@ -68,6 +68,13 @@ The displayed information includes:
 
 The component also uses loading and error states to inform the user about the status of the API request.
 
+### Box.jsx
+The `Box` component is a reusable component used to display content inside collapsible sections. It receives a `title` and `content` through props and displays the title as a clickable heading.
+
+It uses React's `useState` hook to manage the visibility of the content. When the user clicks the title, the visibility state is toggled, allowing the content to be shown or hidden without removing the section title. The component uses `Box.css` for its styling.
+
+This component improves the user experience by allowing users to collapse sections they do not currently need, keeping the page more organized.
+
 ### Styling
 
 CSS files define the visual appearance, spacing, colors, layout, and transitions of the website.
