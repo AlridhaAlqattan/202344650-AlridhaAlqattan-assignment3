@@ -30,7 +30,7 @@ Compared to Assignment 2, this version introduces additional functionality, incl
 - HTML
 - CSS
 - GitHub REST API
-- Official Joke API
+- Official Joke API (Note: the API was down when this assignment was completed)
 - Vite
 
 ## Setup Instructions
