@@ -4,23 +4,8 @@ body {
   position: relative;
 }
 
-/* percentages are used for better displaying on phones */
-#navigation {
-  display: flex;
-  background-color: lightblue;
-  border-style: solid;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin: 10px auto;
-  font-size: 1rem;
-}
-
-#navigation ul {
-  list-style-type: upper-latin;
-  padding: 5px;
-  margin: 0;
+Box#navigation > ul {
+  list-style: lower-alpha;
 }
 
 /* an id for a wrap that wraps nearly the entire body */
