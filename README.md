@@ -138,7 +138,7 @@ Detailed information about AI usage, including the tools used, their purposes, a
 
 ### Performance
 - Images are compressed and resized to reduce loading times.
-- Unused code and files are removed.
+- Unused code is removed.
 - CSS and React components are organized to reduce repetition.
 - Performance is evaluated using Lighthouse.
 
