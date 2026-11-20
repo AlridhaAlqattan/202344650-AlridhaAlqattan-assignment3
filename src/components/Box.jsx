@@ -7,9 +7,9 @@ export default function Box({ title, content }) {
 
     return (
         <>
-             <h2 id="boxTitle" onClick={() => setIsVisible(!isVisible)}>{title}</h2>
-                {isVisible && <p>{content}</p>}
-            
+            <h2 id="boxTitle" onClick={() => setIsVisible(!isVisible)}>{title}</h2>
+            {isVisible && <p>{content}</p>}
+
         </>
 
 

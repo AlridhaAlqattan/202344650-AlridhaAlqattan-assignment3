@@ -4,9 +4,7 @@ body {
   position: relative;
 }
 
-Box#navigation > ul {
-  list-style: lower-alpha;
-}
+
 
 /* an id for a wrap that wraps nearly the entire body */
 #wrap {

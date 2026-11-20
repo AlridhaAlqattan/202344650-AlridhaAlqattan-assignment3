@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './App.css'
 import TimeDate from './components/TimeDate.jsx'
 import kfupmLogo from './assets/kfupm-logo-300x284.webp'
@@ -53,7 +52,7 @@ function App() {
                 project called Pseudo File System. The project was about creating a file system
                 using some concepts of data structures i learned. i used java and tree like structures.
               </p>
-              <a href="assets/file-system.jpg" target="_blank"><img src="assets/file-system.jpg" alt="File System"
+              <a href="assets/file-system.jpg" target="_blank"><img src="assets/file-system.webp" alt="File System"
                 className="projImg" /></a>
             </div>
 
@@ -65,7 +64,7 @@ function App() {
                 which enables KFUPM students to report problems in their buldings. Whether the
                 problem is related to electricity, water, or any other issue.
               </p>
-              <a href="assets/webdev.jpg" target="_blank"><img src="assets/webdev.jpg" alt="Web Development"
+              <a href="assets/webdev.jpg" target="_blank"><img src="assets/webdev.webp" alt="Web Development"
                 class="projImg" /></a>
             </div>
           </>} /></section>
@@ -91,9 +90,9 @@ function App() {
 
         <section id="joke">
           <Box title="Programming Joke" content={
-          <div id="box5" className="box">
-            <JokeBox />
-          </div>} />
+            <div id="box5" className="box">
+              <JokeBox />
+            </div>} />
         </section>
 
       </div>
