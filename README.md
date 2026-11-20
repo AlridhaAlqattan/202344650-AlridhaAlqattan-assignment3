@@ -43,11 +43,11 @@ Install Node.js and npm before running the project.
 
 1. Clone the repository:
 
-   `git clone YOUR_REPOSITORY_URL`
+   `git clone https://github.com/AlridhaAlqattan/202344650-AlridhaAlqattan-assignment3`
 
 2. Navigate to the project directory:
 
-   `cd YOUR_PROJECT_DIRECTORY`
+   `cd 202344650-AlridhaAlqattan-assignment3`
 
 3. Install the dependencies:
 
